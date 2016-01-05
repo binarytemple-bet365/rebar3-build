@@ -33,6 +33,6 @@ RUN chmod a+x /build/rebar3
 VOLUME /erlang_app
 
 CMD ["nouser"]
-ENTRYPOINT ["/bin/bash","/build/build_erlang.sh","/erlang_app","/build"]
+ENTRYPOINT ["/bin/bash","-ev","/build/build_erlang.sh","/erlang_app","/build"]
 
 

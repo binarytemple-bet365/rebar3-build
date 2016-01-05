@@ -26,13 +26,13 @@ RUN apt-get -y install openssh-client git
 RUN mkdir /build
 WORKDIR /build/
 
-ADD build_QuPerl.sh /build/
+ADD build_erlang.sh /build/
 ADD https://s3.amazonaws.com/rebar3/rebar3 /build/
 RUN chmod a+x /build/rebar3
 
 VOLUME /erlang_app
 
 CMD ["nouser"]
-ENTRYPOINT ["/bin/bash","/build/build_QuPerl.sh","/erlang_app","/build"]
+ENTRYPOINT ["/bin/bash","/build/build_erlang.sh","/erlang_app","/build"]
 
 

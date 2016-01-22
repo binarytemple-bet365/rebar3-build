@@ -107,7 +107,7 @@ pushd "${BUILD_DIR}/QuPerl_local"
 rm -f ebin/*.beam ebin/quickstart.app
 
 rebar3 deps
-rebar3 eunit
+rebar3 as test eunit
 rebar3 as test dialyzer
 
 rebar3 as prod compile

@@ -3,6 +3,7 @@
 # run build and test (unit and integration)
 #
 
+set -e -v
 
 ERLANG_APP=$1
 BUILD_DIR=$2
